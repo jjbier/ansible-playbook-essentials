@@ -1,0 +1,8 @@
+- name: upgrade all packages
+  yum: name=* state=latest
+
+- name:  Install Python
+  yum: name=python state=latest
+
+- name: install selinux bindings 
+  yum: name=libselinux-python state=present 

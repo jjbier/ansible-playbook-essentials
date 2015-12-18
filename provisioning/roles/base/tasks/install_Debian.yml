@@ -1,0 +1,9 @@
+- name: upgrade all packages
+  apt: name=* state=latest
+- name:  Install Python
+
+  apt: name=python state=latest
+- name:  create admin group
+
+- name: install selinux bindings 
+  apt: name=libselinux-python state=present 

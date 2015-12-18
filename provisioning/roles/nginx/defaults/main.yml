@@ -1,0 +1,5 @@
+nginx_port: 80
+nginx_root: /usr/share/nginx/html
+nginx_index: index.html
+nginx_user: www-data
+nginx_group: www-data

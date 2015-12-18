@@ -1,0 +1,7 @@
+---
+- name: create default site configurations
+  template: dest=/etc/nginx/conf.d/default.conf src=default.conf.j2 mode=0644
+  notify: 
+    - restart nginx service
+- name: create home page for default site
+  copy: src=index.html dest=/usr/share/nginx/html/index.html

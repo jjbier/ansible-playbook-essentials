@@ -1,0 +1,3 @@
+- name: install mysql server
+  yum:
+    name:"{{ mysql_pkg }}"

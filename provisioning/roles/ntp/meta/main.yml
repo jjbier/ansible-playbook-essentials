@@ -1,0 +1,17 @@
+---
+galaxy_info:
+  author: Xabier Fernández <jfernandez@confirmsign.com>
+  description: 
+  company: Confirmsign
+  license: MIT
+  min_ansible_version: 1.2
+  platforms:
+  - name: EL
+    versions:
+    - all
+  - name: Ubuntu
+    versions:
+    - all
+  categories:
+  - development
+dependencies: [base]

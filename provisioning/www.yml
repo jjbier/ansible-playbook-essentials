@@ -1,0 +1,14 @@
+--- 
+- 
+  hosts: webserver
+  name: "Configure and deploy the webservers and application code"
+  post_tasks: 
+    - 
+      shell: "echo 'I\":\" Done configuring nginx web server...'"
+  pre_tasks: 
+    - 
+      shell: "echo 'I\":\" Beginning to configure web server..'"
+  remote_user: vagrant
+  roles: 
+    - nginx
+  sudo: true

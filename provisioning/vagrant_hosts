@@ -1,0 +1,5 @@
+[webservers]
+www.cfs.lo
+ansible_ssh_host=www.cfs.lo
+[database_servers]
+db[0:1].cfs.lo ansible_ssh_host=db[0:1].cfs.lo

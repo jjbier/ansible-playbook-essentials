@@ -1,0 +1,5 @@
+- name: Add official nginx repository
+  template: dest=/etc/yum.repos.d/nginx.repo src=nginx.repo.j2
+
+- name: Install nginx web server and ensure its at the latest version
+  yum: name=nginx state=latest

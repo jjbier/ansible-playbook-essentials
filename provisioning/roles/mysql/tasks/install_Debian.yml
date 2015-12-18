@@ -1,0 +1,4 @@
+- name: Install mysql server
+  apt:
+    name:"{{ mysql_pkg }}"
+    update_cachey:es

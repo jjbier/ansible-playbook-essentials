@@ -1,0 +1,26 @@
+- name: create admin group
+  group: name=admins state=present
+
+- name: create develop group 
+  group: name=develops state=present
+
+- name: create deployer group
+  group: name=deployers state=present
+
+- name: create admin user
+  user: name=cfs comment="Default administrator user"  uid=2001 group=admins
+
+- name: create deployer user
+  user: name=devops comment="Default develop user"  uid=2002 group=develops
+
+- name: create deployer user
+  user: name=deployer comment="Default deployer user"  uid=2003 group=deployers  
+
+- include: install_RedHat.yml
+  when: ansible_os_family == 'RedHat'
+
+- include: install_Debian.yml
+  when: ansible_os_family == 'Debian'
+  
+# - name: Install ntp
+#   yum: pkg=ntp state=latest
